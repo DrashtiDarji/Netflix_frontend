@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700;900&display=swap');
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Roboto', sans-serif; */
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --black-color: #000;
+    --black-color-light:#151515;
+    --white-color:  #E0BB20;
+    --off-white:#e1e1e1;
+}
+
+
+
+/* ******************************************* */
+/* .sidebar{
+    width: 80px;
+    height: 100%;
+    background-color: var(--black-color);
+    position:fixed;
+    color: rgba(255, 255, 255, 0.698);
+    row-gap:30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top:70px;
+    overflow: hidden;
+    z-index: 8;
+    display: none;
+} */
+
+.menu_items{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-in-out;
+}
+.menu_items:hover{
+    color: var(--white-color);
+    transform: scale(1.1);
+}
+.sidebar i{
+    /* margin-bottom: 40px; */
+    font-size:1.2rem
+}
+/* *********************************************** */
+
+.main_content_container{
+    width: 100%;
+    padding-top:80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    min-height:calc(100% - 50px);
+    background-color: var(--black-color-light);
+}
+.movies_container{
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.tranding{
+    display: flex;
+    column-gap: 18px;
+}
+
+
+
+.movie_card{
+    width: 18%;
+    height: 300px;
+    background-color:rgba(0,0,0,0.9); 
+    color: #fff;
+    cursor: pointer;
+    border-radius:10px;
+    overflow: hidden;
+}
+.movie_card_img{
+    border-radius:10px;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    align-self: center;
+    justify-self: center;
+    /* background-color:blue; */
+}
+.movie_card_img img{
+    max-width: 100%;
+    height: auto;
+    transition: transform .2s ease-out;
+}
+.movie_card:hover .movie_card_img img{
+    transform: scale(1.05);
+}
+.movie_details{
+    position: relative;
+    padding: 10px;
+    height: 50px;
+}
+.movie_title{
+    margin-bottom: 5px;
+    line-height:1.2;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+
+.genre{
+    margin-right: 8px;
+    color: var(--off-white);
+    
+}
+.year{
+    color: lightgray;
+}
+.movie_details a{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    text-decoration: none;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+}
+.movie_details i{
+    color: #fff;
+}
+
+/* banner styles */
+
+.banner{
+    margin-bottom:20px;
+    margin-top:20px;
+    height: 450px;
+    width: 100%;
+    position: relative;
+    /* margin:0 auto; */
+    /* background-color:yellow;  */
+}
+.banner_card{
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.banner_card::before{
+    content: "";
+    position: absolute;
+    color: #fff;
+    z-index: 5;
+    /* inset: 0; */
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(180deg,rgba(0,0,0,0.2) 10%,rgba(0,0,0,0.7) )
+}
+
+.banner_card img{
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.2s ease-in;
+}
+.banner_card:hover .banner_img{
+    transform: scale(1.1);
+}
+
+
+
+
+.card_content{
+    position:absolute;
+    z-index: 5;
+    /* background-color: skyblue; */
+    left: 80px;
+    right: 80px;
+    top: 50%;
+    font-family: 'Bebas Neue';
+    letter-spacing: 3px;
+}
+.card_info{
+    display:flex;
+    padding:10px;
+    align-items: center;
+    column-gap:20px;
+    font-size:1.1rem
+}
+.card_info div{
+    display:flex;
+    align-items: center;
+    column-gap:10px;
+}
+.card_info i{
+    color: var(--white-color);
+    font-size:1.2rem;
+}
+.card_info span{
+    color: #f1f1f1;
+    font-weight:bold;
+}
+.quality{
+    width: 35px;
+    border-radius:6px;
+    height: 25px;
+    background-color:var(--white-color);
+    padding: 5px;
+}
+.card_content h1{
+    /* background-color:blue; */
+    font-size:3rem;
+    color: #fff;
+}
+.card_content a{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    text-decoration: none;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+}
+.card_info>a >i{
+    color: #fff;
+}
+
+
+/* player css */
+
+.player_description{
+    display: flex;
+    color: white;
+    column-gap: 10px;
+    font-family: 'Bebas Neue';
+    margin-top: 5px;
+}
+.disc_child{
+    width: 45%;
+}
+
+.disc_child h2{
+    color:#999;
+}
+
+.player{
+    margin-bottom:20px;
+    margin-top:20px;
+    height:80vh;
+    width: 90%;
+    position: relative;
+    margin-left: 5%;
+    /* background-color: yellow; */
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.video_player{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    
+   
+}
+
+.close_player{
+    width: 100%;
+    padding: 10px 20px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    top: -200px;
+}
+
+.player:hover > .close_player {
+    top: 0px;
+}
+
+.close_btn{
+    font-size: 30px;
+    color: #E0BB20;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.close_btn:hover{
+    transform: scale(1.2);
+}
+

@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter,Routes, Route} from 'react-router-dom'
+
+// custome Import for Component
+import Register from './Pages/Register';
+import Login from './Pages/Login';
+import Homepage from './Pages/Homepage';
+import Protect from './components/Protect';
+import VideoPlayer from './Pages/VideoPlayer'
+import NotFound from './Pages/NotFound';
+import Landingpage from './Pages/Landingpage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Landingpage/>}/>
+            <Route path='/login' element={<Login/>}/>
+            {/* <Route path='/Register' element={<Register/>}/> */}
+            <Route path='/homepage' element={
+              <Protect>
+                  <Homepage/>
+              </Protect>
+            }/>
+            <Route path='/videoPlayer/:id' element={
+              <Protect>
+                  <VideoPlayer/>
+              </Protect>
+            }/>
+            <Route path='*' element={<NotFound/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

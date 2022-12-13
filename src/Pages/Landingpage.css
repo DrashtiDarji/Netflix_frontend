@@ -1,0 +1,571 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --black-color: #000;
+    --black-color-light:#151515;
+    --white-color:  #E0BB20;
+    --off-white:#e1e1e1;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700;900&display=swap');
+@font-face {
+    font-family:roboto_medium ;
+    src: url(../media/fonts/Roboto/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family:roboto_bold ;
+    src: url(../media/fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: neue;
+    src: url(../media/fonts/Bebas_Neue/BebasNeue-Regular.ttf)
+}
+.lp_mobile_v{
+    display: none;
+}
+/* css for header */
+
+
+.lp_header{
+    width: 100%;
+    /* height: 50px; */
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    margin: 10px;
+    z-index: 10;
+    margin: 0px;
+}
+
+.lp_header_container{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+.lp_header_logo{
+    width: 20%;
+    font-family: neue;
+    font-size: 300%;
+    /* font-weight: ; */
+    display: flex;
+    justify-content: center;
+    color: #E0BB20;
+}
+.lp_header_nav{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.lp_language{
+    /* opacity: 0.5; */
+    border: 1px solid white;
+    padding: 2%;
+    font-family: neue;
+}
+
+.lp_globe_icon{
+    color: white;
+}
+.lp_language_select{
+    background-color:transparent;
+    border: none;
+    color: white;
+    
+}
+
+.lp_language_select>option:hover {
+    background-color:#FAFAFA;
+}
+
+.lp_language_select>option {
+    border: none;
+    background-color:#E0BB20;
+    font-family: neue;
+}
+.lp_sign_in{
+    background-color: #E0BB20;
+    color: white;
+    padding: 0px 10px;
+    border: 1ps solid white;
+    width: 30%;
+    font-family: neue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* css for banner */
+.lp_banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../media/images/banner_poster.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(0, 0, 0, 0.7);
+    background-blend-mode: saturation;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lp_banner_container{
+    margin-top: 30px;
+    width: 60%;
+    height: 50%;
+    /* background-color: white; */
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    font-family: robot_regular;
+}
+
+.lp_banner_title{
+    font-family: neue;
+    font-size: 40px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    color: white;
+}
+.lp_banner_container>h2{
+    font-family: neue;
+    letter-spacing: 0.5;
+    font-size: 25px ;
+}
+.lp_banner_container>h2,h3{
+    color: white;
+}
+.lp_banner_container>h3{
+    margin-top: 20px;
+    justify-self: center  ;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+}
+.lp_email_section_container{
+    display: flex;
+    /* flex-direccolumntion: ; */
+    justify-content: center;
+    width: 80%;
+    /* row-gap: 5px; */
+}
+.lp_email_input_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+}
+.lp_email_input{
+    width: 70%;
+    height: 40px;
+    border: none;
+    outline: none;
+    text-indent: 30px;
+}
+.lp_email_btn{
+    background:#E0BB20 ;
+    border: none;
+    width: 20%;
+    color: white;
+    font-size: 15px;
+    font-family: neue;
+    cursor: pointer;
+}
+.lp_email_mandet_error{
+    width: 100%;
+    margin-left: 5%;
+    color: #E0BB20;
+    display: none; 
+     /* make display flex or block to shoe error when not entered email and click on btn */
+}
+
+.lp_form_section{
+    /* padding-top: 80px; */
+    width: 60%;
+}
+.lp_input_form{
+    display: flex;
+    flex-direction: column;
+    font-family: roboto_medium;
+    font-size: 20px;
+    row-gap: 10px;
+    padding: 5px;
+    color: white;
+    align-items: center;
+}
+
+.lp_input_form input{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    text-indent: 40px;
+    background-color: hsl(0deg 2% 91%);
+}
+
+.lp_input_form >input::placeholder{
+    font-size: 20px;
+    font-family: roboto_medium;
+}
+
+.lp_email_btn{
+    background:#E0BB20 ;
+    border: none;
+    width: 40%;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: neue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.lp_section_divider{
+    width: 100%;
+    background-color: #303030;
+    height: 10px;
+    /* margin-top: 50px; */
+}
+
+
+/* css for casting example */
+.lp_casting_example{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color:#030303;
+}
+
+.lp_casting_container{
+    width: 95%;
+    display: flex;
+    color: #E0BB20;
+}
+.lp_cast_contain{
+    width: 50%;
+    height: 500px;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #030303;
+}
+.lp_cast_info{
+    width: 70%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-self: flex-start;
+    flex-direction: column;
+    row-gap: 10px;
+    font-family: neue;
+    color: #E0BB20;
+
+}
+.lp_cast_info>h1{
+    font-size: 50px;
+}
+.lp_cast_info>h3{
+    font-size: 20px;
+    /* color: #E0BB20; */
+    letter-spacing: 0.3;
+}
+.lp_cast_video{
+    width: 50%;
+    height: 500px;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.lp_desktop_img{
+    position: relative;
+    width: 100%;
+    
+}
+.lp_desktop_video{
+    position: absolute;
+    width: 20%;
+    /* display: none; */
+    /* bottom: 300;
+    margin-bottom: 10px; */
+}
+
+/* css for frequently asked questions */
+
+.lp_faq_questions{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding-bottom: 20px;
+
+}
+.lp_faq_container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lp_faq_heading{
+    /* height: 20px; */
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    font-family: neue;
+    font-size: 40px;
+    color: #E0BB20;
+}
+.lp_faq_accordion{
+    width: 90%;
+    padding: 10px;
+    background-color: black;
+}
+
+
+
+.lp_faq_input {
+    display: none;
+}
+
+.lp_faq_label {
+    display: block;    
+    padding: 15px 40px;
+    margin: 0 0 1px 0;
+    cursor: pointer;
+    background: #303030;
+    border-radius: 3px;
+    color: #E0BB20;
+    transition: ease .5s;
+    font-family: neue;
+}
+
+.lp_faq_label:hover {
+    background: #195d6cc4;
+}
+
+.lp_faq_content {
+    background: black;
+    padding: 10px 25px;
+    /* border: 1px solid #A7A7A7; */
+    margin: 0 0 1px 0;
+    border-radius: 3px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.lp_faq_input + .lp_faq_label + .lp_faq_content {
+    display: none;
+}
+
+.lp_faq_input:checked + .lp_faq_label + .lp_faq_content {
+    display: block;
+}
+
+
+
+
+
+/* responsiveness */
+@media (min-width:280px) and (max-width:420px) {
+    /* .desktop{
+        display: none;
+    } */
+    .lp_header_nav{
+        width: 60%;
+    }
+    .lp_header_logo{
+        width: 40%;
+    }
+
+    .lp_banner{
+        height: 60vh;
+    }
+    /* .banner_container{
+        width: 60%;
+        height: 20%;
+    } */
+    .lp_banner_title{
+        font-size: 17px;
+    }
+    .lp_banner_container{
+        width: 80%;
+    }
+    .lp_banner_container>h2,h3{
+        font-size: 15px;
+    }
+    .lp_banner_container>h2{
+        font-size: 10px ;
+        letter-spacing: 1.3;
+    }    
+    .lp_email_section_container{
+        width: 90%;
+    }
+    .lp_email_input_container{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+    }
+    .lp_email_input{
+        width: 100%;
+    }
+    .lp_email_btn{
+        width: 50%;
+        font-size: 17px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    .lp_casting_container{
+        flex-direction: column;
+    }
+    .lp_cast_contain{
+        width: 100%;
+        height: 150px;
+    }
+    .lp_cast_info{
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lp_download_info{
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5;
+    }
+    .lp_cast_info>h1{
+        font-size: 30px;
+
+    }
+    .lp_cast_video{
+        width: 100%;
+        height: 200px;
+    }
+    .lp_desktop_video{
+        width: 40%;
+    }
+    .lp_desktop_img{
+       height: 90%;
+    }
+
+    .lp_download_example_container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .lp_download_prototype{
+        width: 100%;
+    }
+
+    .lp_download_prototype_content{
+        width: 100%;
+        height: 200px;
+    }
+    .lp_mobile_image{
+        height: 300px;
+    }
+    .lp_over_img{
+        width: 90px;
+    }
+    .lp_img_overlap{
+        width: 50%;
+        left: 25% ;
+        top: 60%;
+    }
+    .lp_download_info>h1{
+        font-size: 20px;
+    }
+
+
+}
+
+
+
+@media (min-width:700px) and (max-width:1000px){
+    .lp_over_img{
+        width: 90px;
+    }
+    .lp_mobile_image{
+        height: 300px;
+    }
+
+    .lp_header_nav{
+        width: 40%;
+    }
+    .lp_header_logo{
+        width: 30%;
+    }
+}
+
+
+@media (min-width:1536px) and (max-width:2048px){
+    .lp_header_logo{   
+        font-size: 550%;
+    }
+    .lp_header_nav{
+        width: 30%;
+    }
+    .lp_language{
+        font-size: 40px;
+    }
+    .lp_language_select{
+        font-size: 40px;
+    }
+    .lp_language_select>option{
+        font-size: 10px;
+        width: 10px;
+    }
+    .lp_sign_in{
+        font-size: 40px;
+    }
+
+    .lp_banner_title{
+        letter-spacing: 0.6;
+    }
+    .lp_banner_container>h3{
+        font-size: 25px;
+    }
+    .lp_email_section_container{
+        height: 60px;
+    }
+    .lp_email_input_container{
+        height: 100%;
+    }
+    .lp_email_input{
+        height: 100%;
+    }
+    .lp_email_input::placeholder{
+        font-size: 25px;
+    }
+
+    .lp_email_btn{
+        font-size: 25px;
+    }
+    .lp_cast_info>h1{
+        font-size: 60px;
+    }
+    .lp_cast_info>h3{
+        font-size: 30px;
+        letter-spacing: 1.4px;
+    }
+    .lp_faq_label{
+        font-size: 30px;
+    }
+    .lp_faq_content{
+        font-size: 25px;
+    }
+}
